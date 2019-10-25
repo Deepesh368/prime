@@ -2,7 +2,7 @@
 int main(void)
 {
  int a, i, j, k, count;
- scanf("%d", &a);
+ scanf("%d", &a);  /*input the number to check*/
  k = 0;
  if (a>1)
    {count = 1;
@@ -28,7 +28,7 @@ int main(void)
    {
     count=0;
    }
- printf("total==%d", count);
+ printf("total==%d", count); /*print*/
  return 0;
 }
 
