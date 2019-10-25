@@ -1,23 +1,25 @@
-#include <stdio.h>
+#include <stdio.h> /*This program is used to print primes upto a given number.*/
+#include<stdlib.h>
 int main(void)
 {
- int a, i, j, k, count;
+ int a, i=0, j=0, k=0, count; /*It is better to initialise the variables. */
  scanf("%d", &a);
  k = 0;
  if (a>1)
-   {count = 1;
+   {
+    count = 1; /*good indentation is useful and makes the code more readable. */
     printf("2\n");
     for (i=2;i<=a;i++)
         {
-         for (j=2;j<i;j++)
+         for (j=2;j<i/2;j++) /*It is enough to check till i/2 this helps eliminate the unneccesary cases.*/
              {
               k = i % j;
-              if (k==0)
+              if (k == 0)
                  {
                   break;
                  }
              } 
-         if (k!=0)
+         if (k != 0)
             {
              count++;
              printf("%d\n",i);
@@ -26,9 +28,9 @@ int main(void)
    }
  else
    {
-    count=0;
+    count = 0;
    }
- printf("total==%d", count);
+ printf("total = %d", count);
  return 0;
 }
 
